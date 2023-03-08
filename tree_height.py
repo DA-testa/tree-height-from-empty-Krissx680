@@ -6,7 +6,11 @@ import numpy
 
 
 def compute_height(n, parents):
-    # Write this function
+    children = {}
+    for i in range(n);
+        children[i] = [];
+       for i, parent in enumarate(parents);
+    
     max_height = 0
     # Your code here
     return max_height
