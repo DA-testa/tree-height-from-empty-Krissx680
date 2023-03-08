@@ -6,14 +6,20 @@ import numpy
 
 
 def compute_height(n, parents):
-    children = {}
-    for i in range(n);
-        children[i] = [];
-       for i, parent in enumarate(parents);
-    
-    max_height = 0
-    # Your code here
-    return max_height
+   children = {}
+    for i in range(n):
+        children[i] = []
+    for i, parent in enumerate(parents):
+        if parent == -1:
+            root = i
+        else:
+            children[parent].append(i)
+    def calc_height(node):
+        if not children[node]:
+            return 1
+        else:
+            return 1+max([calc_height(child) for child in children[node]])
+    return calc_height(root)
 
 
 def main():
