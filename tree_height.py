@@ -9,13 +9,13 @@ def compute_height(n, parents):
    children = {}
     for i in range(n):
         children[i] = []
-    for i, parent in enumerate(parents):
-        if parent == -1:
+    for i, parent in enumerate(parents)
+        if parent == -1
             root = i
         else:
             children[parent].append(i)
-    def calc_height(node):
-        if not children[node]:
+    def calc_height(node)
+        if not children[node]
             return 1
         else:
             return 1+max([calc_height(child) for child in children[node]])
@@ -29,10 +29,10 @@ def main():
         parents = list(map(int, input().strip().split()))
     elif source == "F":
         file_name = input().strip()
-        if "a" in file_name:
+        if "a" in file_name
             sys.exit()
         try:
-            with open(file_name, "r") as file:
+            with open(file_name, "r") as file
                 n = int(file.readline().strip())
                 parents = list(map(int, file.readline().strip().split()))
         except FileNotFoundError:
